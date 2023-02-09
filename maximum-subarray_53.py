@@ -6,6 +6,7 @@ def maxSubArray(nums):
         return 0
         
     max_sub = nums[0]
+    print(max_sub)
     cur_sum = 0
 
     for num in nums:
@@ -19,4 +20,4 @@ def maxSubArray(nums):
 
 
 output = maxSubArray(nums)
-print(output)
+# print(output)
