@@ -3,9 +3,9 @@
  * @param {number} m
  * @param {number[]} nums2
  * @param {number} n
- * @return {void} Do not return anything, modify nums1 in-place instead.
+ * @return {void}
  */
-var merge = function (nums1, m, nums2, n) {
+const merge = (nums1, m, nums2, n) => {
   let i = m - 1;
   let j = n - 1;
   let k = m + n - 1;
