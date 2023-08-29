@@ -2,18 +2,18 @@ prices = [7, 1, 5, 3, 6, 4]
 
 def maxProfit(prices):
     left, right = 0, 1
-    maxProfit = 0
+    max_rofit = 0
 
     while right < len(prices):
         if prices[left] < prices[right]:
-            profit = prices[right] - prices[left]
-            maxProfit = max(maxProfit, profit)
+            curr_rofit = prices[right] - prices[left]
+            max_rofit = max(curr_rofit, max_rofit)
         else:
             left = right
         
         right += 1
     
-    return maxProfit
+    return max_rofit
 
 print(maxProfit(prices))
 
