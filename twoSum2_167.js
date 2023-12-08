@@ -2,6 +2,8 @@
  * @param {number[]} numbers
  * @param {number} target
  * @return {number[]}
+ * 
+ * Two pointer
  */
 const twoSum = (numbers, target) => {
   let left = 0;
