@@ -29,4 +29,4 @@ function minWindow(s, t) {
 
 const s = 'ADOBECODEBANC';
 const t = 'ABC';
-console.log(minWindow(s, t)); // Output: "BANC"
+console.log(minWindow(s, t));
