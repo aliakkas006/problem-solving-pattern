@@ -4,6 +4,7 @@
  * @return {number[]}
  * 
  * Two pointer
+ * If input array is sorted
  */
 const twoSum = (numbers, target) => {
   let left = 0;
