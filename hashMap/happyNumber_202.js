@@ -9,9 +9,9 @@ const isHappy = function (n) {
   const getNext = (number) => {
     let totalSum = 0;
     while (number > 0) {
-      let digit = number % 10;
-      totalSum += digit * digit;
-      number = Math.floor(number / 10);
+      let digit = number % 10; // Get the last digit of the number
+      totalSum += digit * digit; // Square the digit and add it to the total sum
+      number = Math.floor(number / 10); // Remove the last digit from the number
     }
     return totalSum;
   };
