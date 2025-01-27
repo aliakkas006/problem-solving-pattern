@@ -3,16 +3,20 @@
  * @return {number}
  */
 const lengthOfLongestSubstring = (str) => {
-  let charIndexMap = new Map();
-  let left = 0;
+  const charSet = new Set();
+  let start = 0;
   let maxLen = 0;
 
-  for (let right = 0; right < str.length; right++) {
-    if (charIndexMap.has(str[right]))
-      left = Math.max(charIndexMap.get(str[right]) + 1, left);
+  for (let end = 0; end < str.length; end++) {
+    // If the character is exist in set
+    while (charSet.has(str[end])) {
+      charSet.delete(str[start]);
+      start++;
+    }
 
-    charIndexMap.set(str[right], right);
-    maxLen = Math.max(maxLen, right - left + 1);
+    // If the character is not exist in the set
+    charSet.add(str[end]);
+    maxLen = Math.max(maxLen, end - start + 1);
   }
 
   return maxLen;
