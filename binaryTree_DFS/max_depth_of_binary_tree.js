@@ -11,19 +11,15 @@
  * @return {number}
  */
 const maxDepth = (root) => {
-  // Base case: empty tree
-  if (!root) return 0;
-
-  const queue = [[root, 1]]; //[node, depth]
-  let maxDepth = 0;
-
-  while (queue.length > 0) {
-    const [node, depth] = queue.shift();
-    maxDepth = Math.max(maxDepth, depth);
-
-    if (node.left) queue.push([node.left, depth++]);
-    if (node.right) queue.push([node.right, depth++]);
+  // Base case: if the root is null, the depth is 0
+  if (root === null) {
+    return 0;
   }
 
-  return maxDepth;
+  // Recursively calculate the depth of the left and right subtrees
+  const leftDepth = maxDepth(root.left);
+  const rightDepth = maxDepth(root.right);
+
+  // The maximum depth is the maximum of the left and right depths, plus 1 for the root
+  return Math.max(leftDepth, rightDepth) + 1;
 };
