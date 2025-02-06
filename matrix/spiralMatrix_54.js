@@ -1,6 +1,9 @@
 /**
  * @param {number[][]} matrix
  * @return {number[]}
+ * 
+ * Time Complexity: O(m * n)
+ * Space Complexity: O(1)
  */
 const spiralOrder = (matrix) => {
   const result = [];
