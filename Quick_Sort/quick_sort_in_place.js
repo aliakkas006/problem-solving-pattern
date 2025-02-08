@@ -3,27 +3,31 @@
     Space Complexity -> O(1)
 */
 
-const partition = (arr, low, high) => {
-  const pivot = arr[high]; // Choosing pivot as the last element
-  let i = low - 1;  // Index of smaller element
+const quickSort = (arr, left = 0, right = arr.length - 1) => {
+  const partition = (left, right) => {
+    let pivot = arr[right]; // Choose pivot as the last element
+    let i = left; // i is the partition index (where the pivot will end up)
 
-  for (let j = low; j < high; j++) {
-    // If the current element is smaller than the pivot
-    if (arr[j] < pivot) {
-      i++;  // Increment index of smaller element
-      [arr[i], arr[j]] = [arr[j], arr[i]]; // Swap 
+    // Travarse the Array
+    for (let j = left; j < right; j++) {
+      // If arr[j] is less than or equal to pivot (descending order)
+      if (arr[j] <= pivot) {
+        // Swap element at i with element at j
+        [arr[i], arr[j]] = [arr[j], arr[i]];
+        i++; // Move partition index forward
+      }
     }
-  }
-  [arr[i + 1], arr[high]] = [arr[high], arr[i + 1]]; // Swap pivot into position
-  return i + 1; // Return pivot index
-};
 
-const quickSort = (arr, low = 0, high = arr.length - 1) => {
-    // If the low index is less than the high index
-  if (low < high) {
-    const pivotIndex = partition(arr, low, high); // Partition the array
-    quickSort(arr, low, pivotIndex - 1); // Sort left half
-    quickSort(arr, pivotIndex + 1, high); // Sort right half
+    // Swap pivot into its correct place
+    [arr[i], arr[right]] = [arr[right], arr[i]];
+    return i; // Return pivot's final index
+  };
+
+  // If the left index is less than the right index
+  if (left < right) {
+    const pivotIndex = partition(left, right); // Partition the array
+    quickSort(arr, left, pivotIndex - 1); // Sort left half
+    quickSort(arr, pivotIndex + 1, right); // Sort right half
   }
 };
 
