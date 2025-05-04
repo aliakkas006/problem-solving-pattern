@@ -1,6 +1,6 @@
 # 🚀 LeetCode Problem Solving Pattern
 
-Welcome to my curated collection of LeetCode problems, organized by problem-solving **patterns** and **data structures/algorithms**. This repository is part of my journey to master problem solving, competitive programming, sharpen my coding skills, and build a solid foundation in algorithmic problem solving.
+Welcome to my curated collection of LeetCode problems, organized by **Problem-solving patterns**, **Data structures** and **Algorithms**. This repository is part of my journey to master problem solving, competitive programming, sharpen my coding skills, and build a solid foundation in algorithmic problem solving.
 
 ---
 
@@ -33,17 +33,29 @@ Each problem in this repository is solved with clarity and efficiency, following
 
 All solutions are grouped by the **primary pattern or data structure** used to solve them:
 
-- 📁 two-pointers/
-- 📁 slidingt_window/
-- 📁 binaryt_search/
-- 📁 binaryt_search_tree/
-- 📁 dynamict_programming/
-- 📁 graphs/
-- 📁 backtracking/
-- 📁 greedy/
-- 📁 bit_manipulation/
-- 📁 union_find/
-- 📁 trie/
+- 📁 Array/
+- 📁 Backtracking/
+- 📁 Binary_search/
+- 📁 Binary_tree_bfs/
+- 📁 Binary_tree_dfs/
+- 📁 Bucket_sort/
+- 📁 Graph_bfs/
+- 📁 Graph_dfs/
+- 📁 Hashmap/
+- 📁 Heap/
+- 📁 Intervals/
+- 📁 Linkedlist/
+- 📁 Matrix/
+- 📁 Merge_sort/
+- 📁 Quick_sort/
+- 📁 Sliding_window/
+- 📁 Stack/
+- 📁 Two_pointer/
+- 📁 Dynamic_programming/
+- 📁 Greedy/
+- 📁 Bit_manipulation/
+- 📁 Union_find/
+- 📁 Trie/
 
 
 Each folder contains:
@@ -54,12 +66,10 @@ Each folder contains:
 
 ---
 
-
----
-
 ## 📚 Languages Used
 
 - 🟨 JavaScript
+- 🟦 C++
 - 🟩 Go
 > Depending on the problem or the goal of practice, I solve using different languages.
 
